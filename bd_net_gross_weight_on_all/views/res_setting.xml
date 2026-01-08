@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="res_view_users_form__form" model="ir.ui.view">
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//notebook" position="before">
+                <group string="Configuration: Net and Gross Weight">
+                    <group>
+                        <field name="sale_net_gross"/>
+                        <field name="purchase_net_gross"/>
+                    </group>
+                    <group>
+                        <field name="transfers_net_gross"/>
+                        <field name="invoicing_net_gross"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

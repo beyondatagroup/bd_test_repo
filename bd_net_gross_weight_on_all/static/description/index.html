@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<!--FINAL INDEX UPDATED-->
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .nav-tabs li .active {
+      background-color: #5154A5;
+      color: #fff !important;
+    }
+
+    .accordion .card-body {
+      background-color: #f0f4f7;
+    }
+
+    .accordion .fa {
+      margin-right: 0.5rem;
+    }
+
+    .accordion button,
+    .accordion button:hover,
+    .accordion button:focus {
+      text-decoration: none;
+    }
+
+    .card-header:after {
+      content: "\2212";
+      color: #000;
+      font-weight: bold;
+      float: left;
+      margin-right: 13px;
+      margin-left: 0px;
+      font-size: 18px;
+    }
+
+    .collapsed:after {
+      content: '\002B';
+    }
+
+    </style>
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
+</head>
+
+<body>
+<!-- HERO -->
+<div class="container">
+    <!--Slide-->
+    <div class="row" style="padding: 4rem 2.5rem 0 !important; background-color: #fff !important;">
+        <div class="col-lg-12 d-flex flex-column align-items-center">
+            <h1 class="text-center text-uppercase"
+                style="font-family: Arial, Helvetica, sans-serif, !important; font-size: 67px !important; color: #5154a5; font-weight: 900 !important;">
+                <span style="color:#5154A5;">Net & Gross Weight Tracking (Sales | Purchase | Invoice | Delivery)</span>
+            </h1>
+            <!-- <p class="my-1 text-center text-uppercase"
+               style="font-family: Arial, Helvetica, sans-serif; letter-spacing: 4px !important; color: #74788D !important;font-size: 21px;">
+                ADD A PERSONAL TOUCH AND AID IN NAVIGATION AND ORGANIZATION</p> -->
+        </div>
+        <!-- <div class="col-lg-12 d-flex flex-column justify-content-center">
+            <p class="my-1 text-center"
+               style="font-family: Arial, Helvetica, sans-serif, !important; color: #212121 !important;font-size: 16px;">
+                The Net & Gross Weight Tracking (Sales | Purchase | Invoice | Delivery) module in Odoo helps businesses maintain accurate inventory by preventing stock levels from falling below zero for stockable products. It automatically blocks any stock operations such as deliveries, pickings, or manufacturing that would reduce stock below zero. This ensures that all stock movements are valid and inventory data remains reliable. The module also allows exceptions at the product, product category, or warehouse location level for more flexibility.
+            </p>
+        </div> -->
+
+        <div class="col-lg-12 d-flex justify-content-center align-items-center">
+            <img src="BeyonData_Logo.png" height="auto" style="width:50%;" class="img-responsive">
+        </div>
+        <!--        <div class="col-md-12 text-center ">-->
+
+
+        <!--            <a href="https://youtu.be/0CXDiVmVfhs" target="_blank"-->
+        <!--               style="background-color:#5154A5; font-family:Arial, Helvetica, sans-serif; display:inline-block; padding:7px 15px 7px 15px; border:1px solid #000000; border-radius:35px"-->
+        <!--               class="mx-1 mb-2 deep-1 deep_hover">-->
+        <!--                <i class="fa fa-video-camera mx-2" style="font-size: 25px; color: white; vertical-align:middle"-->
+        <!--                   aria-hidden="true"></i>-->
+        <!--                <span style="color:#fff; font-size:16px; vertical-align:middle">DEMO VIDEO</span>-->
+        <!--            </a>-->
+
+        <!--        </div>-->
+
+
+        <!-- <div class="col-md-12 text-center ">
+          <a href="" target="_blank"
+            style="background-color:#5154A5; font-family:Arial, Helvetica, sans-serif; display:inline-block; padding:7px 15px 7px 15px; border:1px solid #000000; border-radius:35px"
+            class="mx-1 mb-2 deep-1 deep_hover">
+            <i class="fa fa-video-camera mx-2" style="font-size: 25px; color: white; vertical-align:middle"
+              aria-hidden="true"></i>
+            <span style="color:#fff; font-size:16px; vertical-align:middle">DEMO VIDEO</span>
+          </a>
+
+        </div> -->
+    </div>
+
+
+    <!-- END OF slide -->
+    <section class="oe_container pb-5">
+        <div class="mt64 mb64">
+            <h2 class="text-center text-uppercase"
+                style="font-family: Arial, Helvetica, sans-serif !important; font-size: 50px !important; color:#5154a5; font-weight: 900 !important;">
+                <span style="color:#5154a5;">Supported Editions</span>
+            </h2>
+            <p class="my-1 text-center text-uppercase" style="letter-spacing:4px !important; color:#74788D !important">
+                Net & Gross Weight Tracking (Sales | Purchase | Invoice | Delivery)</p>
+            <br/>
+            <br/>
+            <div class="col-md-12 text-center ">
+
+                <p style="background-color:#5988C6; font-family:Arial, Helvetica, sans-serif; display:inline-block; padding:15px 20px 15px 20px; border:1px solid #000000; border-radius:35px"
+                   class="mx-1 mb-2 deep-1 deep_hover">
+                    <img class="img img-responsive" src="odoo_community.png" height="40px" width="40px">
+                    <span style="color:#fff; font-size:20px; vertical-align:middle;margin-left: 5px;">Community</span>
+                </p>
+
+                <p style="background-color:#5988C6; font-family:Arial, Helvetica, sans-serif; display:inline-block; padding:15px 20px 15px 20px; border:1px solid #000000; border-radius:35px"
+                   class="mx-1 mb-2 deep-1 deep_hover">
+                    <img class="img img-responsive" src="enterprise.png" height="40px" width="40px">
+                    <span style="color:#fff; font-size:20px; vertical-align:middle;margin-left: 5px;">Enterprise</span>
+                </p>
+                <p style="background-color:#5988C6; font-family:Arial, Helvetica, sans-serif; display:inline-block; padding:15px 20px 15px 20px; border:1px solid #000000; border-radius:35px"
+                   class="mx-1 mb-2 deep-1 deep_hover">
+                    <img class="img img-responsive" src="odoo_sh.png" height="40px" width="40px">
+                    <span style="color:#fff; font-size:20px; vertical-align:middle;margin-left: 5px;">odoo
+              sh.</span>
+                </p>
+            </div>
+
+    </section>
+    <!--Highlights-->
+    <section class="oe_container pb-5">
+        <div class="mt64 ">
+            <h2 class="text-center text-u-ppercase"
+                style="font-family: Arial, Helvetica, sans-serif !important; font-size: 50px !important; color:#5154a5; font-weight: 900 !important;">
+                <span style="color:#5154a5;">KEY HIGHLIGHTS</span>
+            </h2>
+            <p class="my-1 text-center text-uppercase" style="letter-spacing:4px !important; color:#74788D !important">
+                Net & Gross Weight Tracking (Sales | Purchase | Invoice | Delivery)</p>
+
+            <!-- <br/>
+                        <div class="row" style="margin-bottom: 85px;">
+                            <div style="margin:2rem">
+                                <img src="highlights.png" style="width: 100%;"
+                                     class="col-lg-12 d-flex flex-column align-items-center">
+                            </div>
+
+                        </div>
+
+
+            <br/> -->
+
+            <div class="row" style="margin-bottom: 85px;">
+                <div class="col-md-6 col-sm-12 mt32">
+                    <div class="container shadow d-flex align-items-center justify-content-center" style="border-radius: 5px; padding: 0px 0px 15px 0px; min-height: 80px; margin: 0px auto;">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center" style="float:left">
+                            <img class="img img-responsive" src="test-1.png">
+                        </div>
+                        <div class="col-md-9" style="padding-left:0; float:left; width:70%">
+                            <h3 class="mt16 mb0" style="font-family: Arial, Helvetica, sans-serif !important; font-weight:500; font-size:22px; color: #5154a5;">
+                                Net and Gross Weight Fields
+                            </h3>
+                            <p class=" mt8 mb-0" style="font-family: Arial, Helvetica, sans-serif !important ; color: #280135; margin-bottom: 0px;">
+                                Adds separate Net Weight (without packaging) and Gross Weight (with packaging) fields on products and key documents like Sales, Purchase, Invoice, and Delivery for clear weight tracking.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 mt32">
+                    <div class="container shadow d-flex align-items-center justify-content-center"
+                         style="border-radius: 5px; padding: 0px 0px 15px 0px; min-height: 80px; margin: 0px auto;">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center" style="float:left">
+                            <img class="img img-responsive" src="test-1.png">
+                        </div>
+                        <div class="col-md-9" style="padding-left:0; float:left; width:70%">
+                            <h3 class="mt16 mb0"
+                                style="font-family: Arial, Helvetica, sans-serif !important; font-weight:500; font-size:22px; color: #5154a5;">
+                                Automatic Weight Calculation</h3>
+                            <p class=" mt8 mb-0"
+                               style="font-family: Arial, Helvetica, sans-serif !important ; color: #280135; margin-bottom: 0px;">
+                                Automatically calculates total Net and Gross Weights by multiplying the per-unit weight with the ordered quantity, reducing manual effort and chances of error.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 mt32">
+                    <div class="container shadow d-flex align-items-center justify-content-center"
+                         style="border-radius: 5px; padding: 0px 0px 15px 0px; min-height: 80px; margin: 0px auto;">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center" style="float:left">
+                            <img class="img img-responsive" src="test-1.png">
+                        </div>
+                        <div class="col-md-9" style="padding-left:0; float:left; width:70%">
+                            <h3 class="mt16 mb0"
+                                style="font-family: Arial, Helvetica, sans-serif !important; font-weight:500; font-size:22px; color: #5154a5;">
+                                Weight Display on Documents</h3>
+                            <p class=" mt8 mb-0"
+                               style="font-family: Arial, Helvetica, sans-serif !important ; color: #280135; margin-bottom: 0px;">
+                                Shows calculated Net and Gross Weights clearly on sales, purchase, invoice, and delivery forms, helping maintain transparency and easy record tracking.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 mt32">
+                    <div class="container shadow d-flex align-items-center justify-content-center"
+                         style="border-radius: 5px; padding: 0px 0px 15px 0px; min-height: 80px; margin: 0px auto;">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center" style="float:left">
+                            <img class="img img-responsive" src="test-1.png">
+                        </div>
+                        <div class="col-md-9" style="padding-left:0; float:left; width:70%">
+                            <h3 class="mt16 mb0"
+                                style="font-family: Arial, Helvetica, sans-serif !important; font-weight:500; font-size:22px; color: #5154a5;">
+                                Inventory Integration</h3>
+                            <p class=" mt8 mb-0"
+                               style="font-family: Arial, Helvetica, sans-serif !important ; color: #280135; margin-bottom: 0px;">
+                                Seamlessly connects weight data with inventory and delivery operations, helping logistics teams plan and manage shipments accurately while maintaining compliance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 mt32">
+                    <div class="container shadow d-flex align-items-center justify-content-center"
+                         style="border-radius: 5px; padding: 0px 0px 15px 0px; min-height: 80px; margin: 0px auto;">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center" style="float:left">
+                            <img class="img img-responsive" src="test-1.png">
+                        </div>
+                        <div class="col-md-9" style="padding-left:0; float:left; width:70%">
+                            <h3 class="mt16 mb0"
+                                style="font-family: Arial, Helvetica, sans-serif !important; font-weight:500; font-size:22px; color: #5154a5;">
+                                Multi-language Support</h3>
+                            <p class=" mt8 mb-0"
+                               style="font-family: Arial, Helvetica, sans-serif !important ; color: #280135; margin-bottom: 0px;">
+                                Supports multiple languages and localization so businesses across different regions can use it without barriers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 mt32">
+                    <div class="container shadow d-flex align-items-center justify-content-center"
+                         style="border-radius: 5px; padding: 0px 0px 15px 0px; min-height: 80px; margin: 0px auto;">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center" style="float:left">
+                            <img class="img img-responsive" src="test-1.png">
+                        </div>
+                        <div class="col-md-9" style="padding-left:0; float:left; width:70%">
+                            <h3 class="mt16 mb0"
+                                style="font-family: Arial, Helvetica, sans-serif !important; font-weight:500; font-size:22px; color: #5154a5;">
+                                Easy Configuration
+                            </h3>
+                            <p class=" mt8 mb-0"
+                               style="font-family: Arial, Helvetica, sans-serif !important ; color: #280135; margin-bottom: 0px;">
+                                Setup is simple—enter Net and Gross Weights once in the product form, and the module automatically applies and displays them across all related transactions.</p>
+                        </div>
+
+                    </div>
+                </div>
+    </section>
+    <!--End of Highlights-->
+
+    <!--Overview-->
+    <section class="oe_container pb-5 mb0">
+        <div class="mt4 mb0">
+
+            <div class="col-lg-12 d-flex flex-column align-items-center mb0">
+                <h1 class="text-center text-uppercase"
+                    style="font-family:Arial, Helvetica, sans-serif !important; font-size:40px !important; color:#791d97; font-weight:900 !important">
+                    <span style="color:#5154a5">Overview</span>
+                    <sup>
+                    </sup>
+                </h1>
+                <p class="my-1 text-center text-uppercase"
+                   style="letter-spacing:4px !important; color:#74788D !important">
+                    Net & Gross Weight Tracking (Sales | Purchase | Invoice | Delivery) </p>
+            </div>
+
+            <div class="col-sm-12 py-2 m-0">
+                <h4 style="text-align:left; font-weight: 400; font-size: 20px;" class="m-0">
+                    <ul class="m-0">
+                        <li>
+                            This module enhances Odoo by adding two key fields: Net Weight (the actual product weight) and Gross Weight (weight including packaging). These fields are integrated into core business documents such as Sales Orders, Purchase Orders, Invoices, Inventory, and Delivery Orders.
+                        </li>
+                        <li>
+                            It automatically calculates total net and gross weights using the product quantity and individual weights set per product. The original weight field is renamed to "Gross Weight" for clarity, while a new "Net Weight" field is introduced. This ensures accurate and consistent weight tracking across all transactions, reducing manual effort and errors.
+                        </li>
+                    </ul>
+                </h4>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+<!--End of Overview-->
+
+<!-- New section -->
+
+<section class="oe_container">
+
+    <div class="container mt0">
+        <div class="row" style="padding: 2rem 2.5rem 0 !important; background-color: #fff !important;">
+            <div class="col-md-12  tab-content ui-front"
+                 style="border-top-right-radius:15px;border-bottom-right-radius:15px;height:auto;">
+                <div class="tab-pane fade active show" id="Screenshot" role="tabpanel" aria-labelledby="screenshot-1">
+                    <div class="row" style="background-color:#fff !important">
+                        <div class="col-lg-12 d-flex flex-column align-items-center">
+                            <h1 class="text-center text-uppercase"
+                                style="font-family:Arial, Helvetica, sans-serif !important; font-size:40px !important; color:#791d97; font-weight:900 !important">
+                                <span style="color:#5154a5">Screenshots</span>
+                            </h1>
+                            <p class="my-0 text-center text-uppercase"
+                               style="letter-spacing:4px !important; color:#74788D !important">
+                                Net & Gross Weight Tracking (Sales | Purchase | Invoice | Delivery)</p>
+                        </div>
+                        <div class="mt-3 col-lg-12 d-flex flex-column align-items-center">
+                            <h3 class="mt16 mt-3 mb-3"
+                                style="font-family:Arial, Helvetica, sans-serif; font-weight:500; font-size: 22px; color:#5154A5">
+                                Configuration
+                            </h3>
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                <b>Set Weight Fields on Products</b>
+                            </p>
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                Go to Inventory -> Products -> Product Variants, and open a product variant form.
+                            </p>
+                            <div style="margin:2rem">
+                                <img src="1.png" style="width: 100%;" class="col-lg-12 d-flex flex-column align-items-center">
+                            </div>
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                In the product details, locate the fields for Net Weight and Gross Weight.
+                            </p>
+                        </div>
+
+
+                        <div class="mt-3 col-lg-12 d-flex flex-column align-items-center">
+
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                               Enter the Net Weight (weight without packaging) and Gross Weight (including packaging) for each product or variant.
+                            </p>
+                            <div style="margin:2rem">
+                                <img src="2.png" style="width: 100%;" class="col-lg-12 d-flex flex-column align-items-center">
+                            </div>
+                        </div>
+
+                        <div class="mt-3 col-lg-12 d-flex flex-column align-items-center">
+
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                <b>Validation Error When Net Weight Is Greater Than Gross Weight</b><br/>
+                                This error occurs when the Net Weight is entered higher than the Gross Weight in the product settings. The system shows a validation message: "Net Weight must be smaller than Gross Weight!"
+                            </p>
+                            <div style="margin:2rem">
+                                <img src="3.png" style="width: 100%;" class="col-lg-12 d-flex flex-column align-items-center">
+                            </div>
+                        </div>
+                        <div class="mt-3 col-lg-12 d-flex flex-column align-items-center">
+
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                <b>User Access Rights for Net and Gross Weight Fields</b><br/>
+                                Users can enable or disable the visibility of Net Weight and Gross Weight fields for a particular user through the user access settings. <br/>
+                                By selecting the respective checkboxes, the fields will appear on the following documents for that specific user:
+
+                            </p>
+                            <div style="margin:2rem">
+                                <img src="4.png" style="width: 100%;" class="col-lg-12 d-flex flex-column align-items-center">
+                            </div>
+                        </div>
+                        <div class="mt-3 col-lg-12 d-flex flex-column align-items-center">
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                Net and Gross Weight on Sale Order – Displays the fields on Sales Orders. <br/>
+                                Net and Gross Weight on Purchase Order – Displays the fields on Purchase Orders. <br/>
+                                Net and Gross Weight on Invoicing Order – Displays the fields on Invoices/Bills. <br/>
+                                Net and Gross Weight on Delivery/Transfers – Displays the fields on Delivery Orders. <br/>
+
+                                In simple terms, administrators can control which users can view and use the Net Weight and Gross Weight fields in Sales, Purchase, Invoice, and Delivery documents.
+                            </p>
+                        </div>
+                        <div class="mt-3 col-lg-12 d-flex flex-column align-items-center">
+
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                <b>Use Weight Information in Transactions:
+                                </b>
+                                <br/>
+                                When creating Sales Orders, Purchase Orders, Invoices, or Delivery Orders, the system will automatically calculate the total net and gross weight based on the product quantities and weights set in the product form.
+                            </p>
+                            <div style="margin:2rem">
+                                <img src="5.png" style="width: 100%;" class="col-lg-12 d-flex flex-column align-items-center">
+                            </div>
+                        </div>
+                        <div class="mt-3 col-lg-12 d-flex flex-column align-items-center">
+
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                <b>Use Weight Information in Sale Order Report:
+                                </b>
+                                <br/>
+                                In the Sales Order -> Other Info tab, the Weight Configuration section provides two options: 
+                            </p>
+                            <div style="margin:2rem">
+                                <img src="6.png" style="width: 100%;" class="col-lg-12 d-flex flex-column align-items-center">
+                            </div>
+                        </div>
+                        <div class="mt-3 col-lg-12 d-flex flex-column align-items-center">
+
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                1) Display weight on report? – When this option is enabled, the Net Weight and Gross Weight fields will appear on the printed Sales Order report. <br/>
+
+2) Display weight column subtotal? – When this option is enabled, the subtotal of the Net Weight and Gross Weight fields will appear on the printed Sales Order report. <br/>
+
+These settings allow users to choose whether weight details and subtotals should be displayed in the Sales Order report.
+                            </p>
+                        </div>
+                        <div class="mt-3 col-lg-12 d-flex flex-column align-items-center">
+
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                <b>Bulk Display Weight Report for Multiple Sale Orders
+                                </b><br/>
+                                To enable "Bulk Display weight report," navigate to the list view of Sale Orders, select multiple sales orders, click on the "Action" menu, and choose either "Bulk Display weight report" or "Bulk Display weight Column Subtotal" based on your requirement.
+                            </p>
+                            <div style="margin:2rem">
+                                <img src="7.png" style="width: 100%;" class="col-lg-12 d-flex flex-column align-items-center">
+                            </div>
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                This feature allows users to quickly display Net Weight and Gross Weight information on printed reports for all selected Sales Orders at once, making it easy to ensure accurate weight details are included in every chosen quotation or order.
+                            </p>
+                        </div>
+                        <div class="mt-3 col-lg-12 d-flex flex-column align-items-center">
+
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                <b>Use Weight Information in Delivery Report:
+                                </b><br/>
+                                In the Sales Order Delivery -> Other Info tab, the Weight Configuration section provides two options: 
+                            </p>
+                            <div style="margin:2rem">
+                                <img src="8.png" style="width: 100%;" class="col-lg-12 d-flex flex-column align-items-center">
+                            </div>
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                1) Display weight on report? – When this option is enabled, the Net Weight and Gross Weight fields will appear on the printed Delivery report. <br/>
+
+                                2) Display weight column subtotal? – When this option is enabled, the subtotal of the Net Weight and Gross Weight fields will appear on the printed Delivery report. <br/>
+
+                                These settings allow users to choose whether weight details and subtotals should be displayed in the Delivery report.
+                            </p>
+                        </div>
+                        <div class="mt-3 col-lg-12 d-flex flex-column align-items-center">
+
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                <b>Bulk Display Weight Report for Multiple Deliveries
+                                </b><br/>
+                                To enable "Bulk Display weight report," navigate to the list view of deliveries, select multiple deliveries, click on the "Action" menu, and choose either "Bulk Display weight report" or "Bulk Display weight Column Subtotal" based on your requirement.
+                            </p>
+                            <div style="margin:2rem">
+                                <img src="9.png" style="width: 100%;" class="col-lg-12 d-flex flex-column align-items-center">
+                            </div>
+                            <p style="font-size: 20px; font-family:Arial, Helvetica, sans-serif ; color:#280135">
+                                This feature allows users to quickly display Net Weight and Gross Weight information on printed reports for all selected deliveries at once, making it easy to ensure accurate weight details are included in every chosen delivery.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</section>
+
+
+<!-- FOOTER -->
+<!-- Footer Section -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12 col-md-12-col-lg-2">
+            <h2 style="font-weight:bold; color:#3D3D4E">Support</h2>
+            <p style="color:#777783">Need help? Get in touch.
+            </p>
+            <hr style="width: 98%;">
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="d-flex align-items-center" style="background-color:#F6F8F9; padding: 15px 5px 15px 0px; ">
+
+
+                <div class="mr-4 mx-3 d-flex justify-content-center align-items-center"
+                     style="background-color:#714B67; height:70px; width:70px;">
+
+                    <i class="fa fa-info-circle" style="font-size: 50px; color: white; vertical-align:middle;"></i>
+                </div>
+
+                <div>
+                    <h4>Need Help?</h4>
+                    <p style="line-height:100%">Got questions or need help?</p>
+                    <a href="mailto:info@beyondatagroup.com">
+                        <p style="font-weight:400; font-size:18px; line-height:80%; color:#5154A5">
+                            info@beyondatagroup.com
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="d-flex align-items-center" style="background-color:#F6F8F9; padding: 15px 5px 15px 0px; ">
+                <div class="mr-4 mx-3 d-flex justify-content-center align-items-center"
+                     style="background-color:#2AC44D; height:70px; width:70px">
+                    <!-- <img src="assets/icons/whatsapp.png" height="52" width="52" style="width:52px; height:52px"> -->
+                    <i class="fa fa-phone-square" style="font-size: 50px; color: white; vertical-align:middle"></i>
+
+                </div>
+                <div>
+                    <h4>Call Us</h4>
+                    <p style="line-height:100%">Say hi to us on</p>
+                    <span href="#">
+              <p style="font-weight:400; font-size:18px; line-height:80%; color:#5154A5">
+                18008906775
+              </p>
+            </span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-12 col-md-4">
+            <div class="d-flex align-items-center" style="background-color:#F6F8F9; padding: 15px 5px 21px 0px;">
+                <div class="mr-4 mx-3 d-flex justify-content-center align-items-center"
+                     style="background-color:#03a9f4; height:70px; width:70px">
+                    <i class="fa fa-calendar" style="font-size: 50px; color: white; vertical-align:middle"></i>
+                </div>
+                <div>
+                    <h4>Book Demo</h4>
+                    <p style="line-height:100%">Book Free Consultation</p>
+                    <a href="mailto:odoosales@beyondatagroup.com"
+                       style="font-weight:400; font-size:18px; line-height:80%; color:#5154A5">
+                        odoosales@beyondatagroup.com
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+<!-- Footer -->
+<section class="oe_container" style="padding: 2rem 3rem 1rem; background-color: #fff !important;">
+    <div class="row" style="max-width:1540px; margin: 0 auto; margin-right: 3rem; ">
+        <!-- Logo -->
+        <div class="col-lg-12 d-flex justify-content-center align-items-center" style="margin-top: 3rem;">
+            <img src="BeyonData_Logo.png" width="200px" height="auto"/>
+        </div>
+        <!-- End of Logo -->
+    </div>
+</section>
+<!-- END OF FOOTER -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

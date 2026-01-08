@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_product_form_net_gross" model="ir.ui.view">
+        <field name="name">product.form.net.gross.weight</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+
+            <!-- Insert after weight field (or any suitable place) -->
+            <xpath expr="//group[@name='group_lots_and_weight']" position="inside">
+
+                <label for="net_weight" invisible="product_variant_count &gt; 1 and not is_product_variant"/>
+
+                <div class="o_row" name="net_weight" invisible="product_variant_count &gt; 1 and not is_product_variant">
+                    <field name="net_weight" class="oe_inline"/>
+                    <field name="weight_uom_name" on_change="1"/>
+                </div>
+
+                <label for="gross_weight" invisible="product_variant_count &gt; 1 and not is_product_variant"/>
+                <div class="o_row" name="gross_weight" invisible="product_variant_count &gt; 1 and not is_product_variant">
+                    <field name="gross_weight" class="oe_inline"/>
+                    <field name="weight_uom_name" on_change="1"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_net_gross" model="ir.ui.view">
+        <field name="name">view.order.form.net.gross.weight</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook//page[@name='other_information']" position="inside">
+                <group string="Weight Configuration" name="weight_configuration" groups="bd_net_gross_weight_on_all.group_net_gross_weight_sale">
+                    <field name="display_weight"/>
+                    <field name="display_weight_subtotel"/>
+                </group>
+            </xpath>
+            <xpath expr="//notebook//page[@name='order_lines']//field[@name='order_line']//list//field[@name='price_unit']" position="after">
+                <field name="net_weight"  groups="bd_net_gross_weight_on_all.group_net_gross_weight_sale"/>
+                <field name="gross_weight"  groups="bd_net_gross_weight_on_all.group_net_gross_weight_sale"/>
+                <field name="total_net_weight"  optional="hide" groups="bd_net_gross_weight_on_all.group_net_gross_weight_sale"/>
+                <field name="total_gross_weight"  optional="hide" groups="bd_net_gross_weight_on_all.group_net_gross_weight_sale"/>
+            </xpath>
+        </field>
+    </record>
+
+    <template id="report_saleorder_document_inherit_weights" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//th[@name='th_priceunit']" position="after">
+            <t t-if="doc.display_weight">
+                <th name="th_net_weight" class="text-end text-nowrap">Net Weight</th>
+                <th name="th_gross_weight" class="text-end text-nowrap">Gross Weight</th>
+            </t>
+        </xpath>
+        <xpath expr="//td[@name='td_product_priceunit']" position="after">
+            <t t-if="doc.display_weight">
+                <td name="td_net_weight" class="text-end text-nowrap">
+                    <span t-field="line.net_weight"/>
+                </td>
+                <td name="td_gross_weight" class="text-end text-nowrap">
+                    <span t-field="line.gross_weight"/>
+                </td>
+            </t>
+        </xpath>
+        <xpath expr="//div[@name='so_total_summary']//table" position="after">
+            <t t-if="doc.display_weight_subtotel">
+                <table class="o_total_table table table-borderless">
+                    <tr>
+                        <td colspan="5"/>
+                        <td colspan="2" class="text-end">
+                            <strong>Total Net Weight:</strong>
+                        </td>
+                        <td class="text-end">
+                            <t t-esc="sum(line.total_net_weight for line in doc.order_line)"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"/>
+                        <td colspan="2" class="text-end">
+                            <strong>Total Gross Weight:</strong>
+                        </td>
+                        <td class="text-end">
+                            <t t-esc="sum(line.total_gross_weight for line in doc.order_line)"/>
+                        </td>
+                    </tr>
+                </table>
+            </t>
+        </xpath>
+
+    </template>
+
+    <record id="action_sale_view_order_form_net_gross" model="ir.actions.server">
+        <field name="name">Bulk Display weight report</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.action_black_net()
+        </field>
+    </record>
+
+    <record id="action_sale_view_order_form_gross_net" model="ir.actions.server">
+        <field name="name">Bulk Display weight column Subtotal</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.action_black_gross()
+        </field>
+    </record>
+
+
+</odoo>

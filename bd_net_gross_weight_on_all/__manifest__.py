@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "Net & Gross Weight Tracking (Sales | Purchase | Invoice | Delivery)",
+    'summary': """Net & Gross Weight Tracking (Sales | Purchase | Invoice | Delivery)""",
+    'description': """This module includes the customization All""",
+    'author': "BeyonData Solution Pvt. Ltd.",
+    'website': "https://www.beyondatagroup.com/",
+    'live_test_url': 'https://www.beyondatagroup.com/contactus',
+    'company': 'BeyonData Solution Pvt. Ltd.',
+    'company': 'BeyonData Solution Pvt. Ltd.',
+    'version': '1.0',
+    'license': 'LGPL-3',
+    'price': '9.99',
+    # 'price': '19.78',
+ 
+    'depends': ['base','purchase','stock','sale_management','account'],
+    'data': [
+        'security/ir_access_right.xml',
+        'views/res_setting.xml',
+        'views/product.xml',
+        'views/sale_order.xml',
+        'views/account_move.xml',
+        'views/purchase_order.xml',
+        'views/stock_move.xml',
+    ],
+    'images': ["static/description/sale_banner.gif"],
+    # 'images': ['static/description/banner.gif'],
+    'installable': True,
+    'auto_install': True,
+    'application': True,
+}

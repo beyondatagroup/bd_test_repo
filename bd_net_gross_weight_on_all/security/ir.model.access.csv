@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+custome_for_requment.access_tender_wizard,access_tender_wizard,custome_for_requment.model_tender_wizard,base.group_user,1,1,1,1
+custome_for_requment.access_tender_line_wizard,access_tender_line_wizard,custome_for_requment.model_tender_line_wizard,base.group_user,1,1,1,1

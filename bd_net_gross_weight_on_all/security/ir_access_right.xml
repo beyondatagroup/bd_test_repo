@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- <record model="res.groups.privilege" id="res_groups_privilege_net_gross">
+        <field name="name">Net And Gross</field>
+    </record> -->
+
+    <record id="group_net_gross_weight_delivery" model="res.groups">
+        <field name="name">Net and Gross Weight on Delivery/Transfers</field>
+    </record>
+
+    <record id="group_net_gross_weight_invoice" model="res.groups">
+        <field name="name">Net and Gross Weight on Invoicing Order</field>
+    </record>
+
+    <record id="group_net_gross_weight_sale" model="res.groups">
+        <field name="name">Net and Gross Weight on Sale Order</field>
+    </record>
+
+    <record id="group_net_gross_weight_purchase" model="res.groups">
+        <field name="name">Net and Gross Weight on Purchase Order</field>
+    </record>
+
+</odoo>

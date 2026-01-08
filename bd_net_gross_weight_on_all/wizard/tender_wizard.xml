@@ -1,0 +1,29 @@
+<odoo>
+    <record id="view_tender_wizard_form" model="ir.ui.view">
+        <field name="name">tender.wizard.form</field>
+        <field name="model">tender.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Tender Wizard">
+                <group>
+                    <group>
+                        <field name="totel_gil" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="totel_office" readonly="1"/>
+                    </group>
+                    <field name="tender_line_ids">
+                        <list readonly="1">
+                            <field name="name"/>
+                            <field name="owner"/>
+                            <field name="date_of_completion"/>
+                            <field name="time_taken"/>
+                        </list>
+                    </field>
+                </group>
+                <footer>
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

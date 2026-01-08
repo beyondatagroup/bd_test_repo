@@ -1,0 +1,83 @@
+<odoo>
+    <record id="view_move_form_net_gross" model="ir.ui.view">
+        <field name="name">account.move.form.inherit.weight</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='other_info']" position="inside">
+                <group string="Weight Configuration" name="weight_configuration" groups="bd_net_gross_weight_on_all.group_net_gross_weight_invoice">
+                    <field name="display_weight"/>
+                    <field name="display_weight_subtotel"/>
+                </group>
+            </xpath>
+
+            <xpath expr="//field[@name='invoice_line_ids']//list//field[@name='price_unit']" position="after">
+                <field name="net_weight" readonly="1" groups="bd_net_gross_weight_on_all.group_net_gross_weight_invoice"/>
+                <field name="gross_weight" readonly="1" groups="bd_net_gross_weight_on_all.group_net_gross_weight_invoice"/>
+                <field name="total_net_weight" optional="hide" readonly="1" groups="bd_net_gross_weight_on_all.group_net_gross_weight_invoice"/>
+                <field name="total_gross_weight" optional="hide" readonly="1" groups="bd_net_gross_weight_on_all.group_net_gross_weight_invoice"/>
+            </xpath>
+        </field>
+    </record>
+
+    <template id="report_invoice_document_inherit_weight" inherit_id="account.report_invoice_document">
+        <xpath expr="//th[@name='th_priceunit']" position="after">
+            <t t-if="o.display_weight">
+                <th name="th_net_weight" class="text-end">Net Weight</th>
+                <th name="th_gross_weight" class="text-end">Gross Weight</th>
+            </t>
+        </xpath>
+        <xpath expr="//td[@name='td_price_unit']" position="after">
+            <t t-if="o.display_weight">
+                <td name="td_net_weight" class="text-end">
+                    <span t-field="line.net_weight"/>
+                </td>
+                <td name="td_gross_weight" class="text-end">
+                    <span t-field="line.gross_weight"/>
+                </td>
+            </t>
+        </xpath>
+
+        <xpath expr="//table[@name='invoice_line_table']" position="after">
+            <t t-if="o.display_weight_subtotel">
+                <table class="o_total_table table table-borderless">
+                    <tr>
+                        <td colspan="5"/>
+                        <td class="text-end"><strong>Total Net Weight:</strong></td>
+                        <td class="text-end">
+                            <t t-esc="sum(line.total_net_weight for line in o.invoice_line_ids)"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"/>
+                        <td class="text-end"><strong>Total Gross Weight:</strong></td>
+                        <td class="text-end">
+                            <t t-esc="sum(line.total_gross_weight for line in o.invoice_line_ids)"/>
+                        </td>
+                    </tr>
+                </table>
+            </t>
+        </xpath>
+    </template>
+
+    <record id="action_account_view_order_form_net_gross" model="ir.actions.server">
+        <field name="name">Bulk Display weight report</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.action_black_net()
+        </field>
+    </record>
+
+    <record id="action_account_view_order_form_gross_net" model="ir.actions.server">
+        <field name="name">Bulk Display weight column Subtotal</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.action_black_gross()
+        </field>
+    </record>
+
+</odoo>
